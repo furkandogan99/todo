@@ -3,20 +3,21 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Todo</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-inner">
 					<div class="container-fluid">
-						<a class="brand" href="#">Todolist</a>
+						<a class="brand" href="<?php echo base_url(); ?>">Todolist</a>
 						<div class="nav-collapse collapse">
 							<p class="navbar-text pull-right">
 
-
+								<a href="<?php echo base_url(); ?>users/register">Register</a>
 							</p>
 							<ul class="nav">
-								<li><a href="#">Home</a></li>
+								<li><a href="<?php echo base_url(); ?>">Home</a></li>
 							</ul>
 						</div>
 					</div>
