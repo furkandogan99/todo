@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 				$this->form_validation->set_rules('email', 'Email', 'trim|required|max_length[100]|min_length[5]|xss_clean|valid_email');
 				$this->form_validation->set_rules('username', 'Username', 'trim|required|max_length[20]|min_length[4]|xss_clean');
 				$this->form_validation->set_rules('password', 'Password', 'trim|required|max_length[20]|min_length[4]|xss_clean');
-				$this->form_validation->set_rules('password2', 'Confirm Password', 'trim|required|max_length[20]|min_length[4]|xss_clean|matches[pasword]');
+				$this->form_validation->set_rules('password2', 'Confirm Password', 'trim|required|max_length[20]|min_length[4]|xss_clean|matches[password]');
 
 				if($this->form_validation->run() == FALSE){
 						$data['main_content'] ='users/register';

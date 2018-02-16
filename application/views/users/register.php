@@ -76,4 +76,6 @@ $data = array(
 <p>
     <?php echo form_submit($data); ?>
 </p>
+</div>
+</div>
 <?php echo form_close(); ?>
