@@ -7,4 +7,7 @@
 <?php if($this->session->flashdata('logged_out')) : ?>
 	  <p class="alert alert-dismissable alert-success"><?php echo $this->session->flashdata('logged_out'); ?></p>
 <?php endif; ?>
+<?php if($this->session->flashdata('noaccess')) : ?>
+	  <p class="alert alert-dismissable alert-danger"><?php echo $this->session->flashdata('noaccess'); ?></p>
+<?php endif; ?>
 <h1>Welkom bij de todolist</h1>
