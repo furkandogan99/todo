@@ -81,4 +81,13 @@ class Lists extends CI_Controller{
 							}
 					}
 				}
+
+				public function delete($list_id){
+
+						$this->List_model->delete_list($list_id);
+
+						$this->session->set_flashdata('list_deleted', 'Je lijst is verwijderd');
+
+						redirect('list/index');
+				}
 		}
