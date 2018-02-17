@@ -54,4 +54,31 @@ class Lists extends CI_Controller{
 				}
 			}
 		}
-	}
+
+		public function edit($list_id){
+				$this->form_validation->set_rules('list_name', 'List Name', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('list_body', 'List Body', 'trim|xss_clean');
+
+				if($this->form_validation->run() == FALSE){
+
+						$data['this_list'] = $this->List_model->get_list_data($list_id);
+
+						$data['main_content'] = 'lists/edit_list';
+						$this->load->view('layouts/main', $data);
+					} else {
+
+
+							$data = array(
+									'list_name'   => $this->input->post('list_name'),
+									'list_body'   => $this->input->post('list_body'),
+									'list_user_id'   => $this->session->userdata('user_id')
+							);
+							if($this->List_model->edit_list($list_id,$data)){
+									$this->session->set_flashdata('list_updated', 'Je taken zijn geupdated');
+
+									redirect('lists/index');
+
+							}
+					}
+				}
+		}

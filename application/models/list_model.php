@@ -15,4 +15,16 @@ class List_model extends CI_Model{
 				$insert = $this->db->insert('lists',$data);
 				return $insert;
 		}
+
+		public function edit_list($list_id, $data){
+				$this->db->where('id', $list_id);
+				$this->db->update('lists', $data);
+				return TRUE;
+		}
+
+		public function get_list_data($list_id){
+				$this->db->where('id', $list_id);
+				$query = $this->db->get('lists');
+				return $query->row();
+		}
 }
