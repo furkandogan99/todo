@@ -37,9 +37,6 @@
     </div>
     <hr>
 </div>
-    <footer>
-        <p>Furkan Dogan</p>
-    </footer>
     </div>
 </body>
 
